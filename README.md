@@ -17,7 +17,9 @@
   mobile SoCs (System-on-Chips), and other advanced semiconductor devices used in smartphones, computers, networking equipment, automotive electronics, and many other applications</p>
   <p align="center" width="100%">
     
-  ![Screenshot 2024-06-04 163039](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/e438a202-2b10-40e9-bcab-35ab806d54c3)
+| ![Screenshot 2024-06-04 163039](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/e438a202-2b10-40e9-bcab-35ab806d54c3) | 
+|:--:| 
+| *Finfet structure* |
 
   </p>
   
@@ -79,4 +81,36 @@ sudo make install
 
 <p> These models are written using Verilog-A [extension .va] and are compiled using OpenVAF compiler. Upon Compilation , we will ger .osdi files from .va files . Add it to your working directory where .sp is present. The latest version of Ngspice has the support for .osdi files which may not be true fur older versions. You can get OpenVAF from https://openvaf.semimod.de/docs/getting-started/introduction/  </p>
 <p>Make sure that the executable of OpenVAF is in the path of your system so that .va files can be compiled </p>
+
+# Finfet Characterestics
+
+| ![Screenshot 2024-06-05 193147](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/a236c5a1-c2b2-4a24-9a5a-103fc67ae7a6) | 
+|:--:|
+| ![Screenshot 2024-06-05 193933](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/4084f42b-fe5f-4d37-a83c-e90ed639ef7a) | 
+| *Basic Idea required before simulation* |
+
+# Finfet Characterestics using Ngspice
+
+<p> In our simulations we have finfets with 14 fins with a fin height of 32 nanometer. And the simulation outputs are as follows
+</p>
+
+| ![Screenshot from 2024-06-04 11-37-20](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/1886836c-d297-43d5-88e2-e2e7a908fe28) | 
+|:--:| 
+| *Id vs Vgs* |
+
+| ![Screenshot from 2024-06-04 11-38-06](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/e1ad3123-a0c4-4684-a005-fa6a1be57ecd) | 
+|:--:| 
+| *Id vs Vds* |
+
+| ![Screenshot from 2024-06-04 11-39-35](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/ede652d7-5fa4-4ae2-b077-1076b12cd987) | 
+|:--:| 
+| ![Screenshot from 2024-06-04 11-38-58](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/89f7031f-c961-42c4-8b18-2975c5885f29) | 
+| *Inverter Characterestics* |
+
+| ![Screenshot from 2024-06-04 11-40-36](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/0bdb2433-f37c-46b6-8ee3-2af088a861ef) | 
+|:--:| 
+| *Inverter Characterestics - with Multiple volatge for various VTC curves* |
+### Conclusion
+
+The shift from CMOS To Finfet is very Pivotal to Semiconductor Industry . But Tuning the properties become difficult because of second order effects. This can be seen vi sub threshold currents in the simulation. These deviations will affects circuits constructed by them . One such evidence is the Noise Margin of the Finfet based Inverter which is not sharp.
 
