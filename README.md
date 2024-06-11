@@ -102,7 +102,7 @@ sudo make install
 |:--:| 
 | *Id vs Vds* |
 
-### Inverter Noise Margin
+### Inverter Noise Margin and Supply variation
 
 <p>The noise margin of an inverter refers to the amount of noise (unwanted electrical signals) that the circuit can tolerate while still maintaining proper operation. It's a measure of the robustness of the circuit against interference and fluctuations in the input signal.</p>
 
@@ -120,7 +120,7 @@ These margins are crucial for reliable operation of digital circuits, especially
 |0.3	|0.174262	|0.114592	|0	|0.125738	|0.114592|   0.1449210  | 
 |0.1	|0.054017	|0.269231	|0	|0.045983	|0.269231|   0.04446130 |
 
-The Above values are the noise margin when VOH is varied.
+The Above values are the noise margin when VOH is varied. Based on our simulation we can say that the CMOS Inverter has lesser deviation from ideal case than our FinFet Inverter. 
 
 </p>
 
@@ -166,6 +166,19 @@ current.</p>
 <p>The symmetric PUN and PDN introduce ease in terms
 of physical design and sizing but it also brings slight
 changes in design decisions and standard cell design.</p>
+
+#### The following table is for aspect ratio vs Inverter Threshold
+The following table should be understood with the fact that the aspect ratio is the ratio of no of fins on nmos and pmos. The Supply voltage of the inverrter is 0.7 V. Upon changing the aspect ratio we make note of Noise Ratio.
+
+| No. of fins in Nmos FinFet    | No. of fins in Pmos FinFet   | Inverter Threshold Vm (in Volts)  |NMH   | NML   |  Inverter Threshold Vm  |
+| :---:   | :---: | :---: |:---:   | :---: | :---: |
+|1   | 7 | 0.465 |0.114754|	0.418033|
+|3   | 7 | 0.418 |0.190164|	0.332787|
+|7   | 7 | 0.348 | 0.271789	|0.245706|
+|7   | 14 | 0.391 |0.204918	|0.314754|
+|7   | 21 | 0.416 |0.172131|	0.35082|
+
+
 
 ### Conclusion
 
