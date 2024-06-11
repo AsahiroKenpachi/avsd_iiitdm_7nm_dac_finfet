@@ -170,8 +170,8 @@ changes in design decisions and standard cell design.</p>
 #### The following table is for aspect ratio vs Inverter Threshold
 The following table should be understood with the fact that the aspect ratio is the ratio of no of fins on nmos and pmos. The Supply voltage of the inverrter is 0.7 V. Upon changing the aspect ratio we make note of Noise Ratio.
 
-| No. of fins in Nmos FinFet    | No. of fins in Pmos FinFet   | Inverter Threshold Vm (in Volts)  |NMH   | NML   |  Inverter Threshold Vm  |
-| :---:   | :---: | :---: |:---:   | :---: | :---: |
+| No. of fins in Nmos FinFet    | No. of fins in Pmos FinFet   | Inverter Threshold Vm (in Volts)  |NMH   | NML   |
+| :---:   | :---: | :---: |:---:   | :---: |
 |1   | 7 | 0.465 |0.114754|	0.418033|
 |3   | 7 | 0.418 |0.190164|	0.332787|
 |7   | 7 | 0.348 | 0.271789	|0.245706|
