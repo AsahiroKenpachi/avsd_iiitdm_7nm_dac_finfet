@@ -112,5 +112,5 @@ sudo make install
 | *Inverter Characterestics - with Multiple voltage for various VTC curves* |
 ### Conclusion
 
-The shift from CMOS To Finfet is very pivotal to Semiconductor Industry . But Tuning the properties become difficult because of second order effects. This can be seen via sub threshold currents in the simulation. These deviations will affects circuits constructed by them . One such evidence is the Noise Margin of the Finfet based Inverter which is not sharp.
+The shift from CMOS To Finfet is very pivotal to Semiconductor Industry . But Tuning the properties become difficult because of second order effects. This can be seen via sub threshold currents in the simulation. These deviations will affects circuits constructed using them . One such evidence is the Noise Margin of the Finfet based Inverter which is not sharp.
 
