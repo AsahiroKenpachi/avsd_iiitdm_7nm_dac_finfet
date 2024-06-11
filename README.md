@@ -94,11 +94,11 @@ sudo make install
 <p> In our simulations we have finfets with 14 fins with a fin height of 32 nanometer. And the simulation outputs are as follows
 </p>
 
-| ![Screenshot from 2024-06-04 11-37-20](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/1886836c-d297-43d5-88e2-e2e7a908fe28) | 
+| ![Screenshot from 2024-06-11 13-53-40](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/75ca3fdd-303c-4df1-b782-fb00a79a40d9) | 
 |:--:| 
 | *Id vs Vgs* |
 
-| ![Screenshot from 2024-06-04 11-38-06](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/e1ad3123-a0c4-4684-a005-fa6a1be57ecd) | 
+| ![Screenshot from 2024-06-11 13-52-07](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/0008896f-2e05-4614-a7e5-56e2d539cb02) | 
 |:--:| 
 | *Id vs Vds* |
 
@@ -109,8 +109,8 @@ sudo make install
 
 | ![Screenshot from 2024-06-04 11-40-36](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/0bdb2433-f37c-46b6-8ee3-2af088a861ef) | 
 |:--:| 
-| *Inverter Characterestics - with Multiple volatge for various VTC curves* |
+| *Inverter Characterestics - with Multiple voltage for various VTC curves* |
 ### Conclusion
 
-The shift from CMOS To Finfet is very Pivotal to Semiconductor Industry . But Tuning the properties become difficult because of second order effects. This can be seen vi sub threshold currents in the simulation. These deviations will affects circuits constructed by them . One such evidence is the Noise Margin of the Finfet based Inverter which is not sharp.
+The shift from CMOS To Finfet is very pivotal to Semiconductor Industry . But Tuning the properties become difficult because of second order effects. This can be seen via sub threshold currents in the simulation. These deviations will affects circuits constructed by them . One such evidence is the Noise Margin of the Finfet based Inverter which is not sharp.
 
