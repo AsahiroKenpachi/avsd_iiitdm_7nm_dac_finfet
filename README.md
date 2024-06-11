@@ -178,6 +178,7 @@ The following table should be understood with the fact that the aspect ratio is 
 |7   | 14 | 0.391 |0.204918	|0.314754|
 |7   | 21 | 0.416 |0.172131|	0.35082|
 
+This methodology of analysis is used to determine the device robustness along with its scalability. We can also predict the variation of the device performance with respect to parameters that can vary during the regular operations of scalabel circuits which can be built using them. 
 
 
 ### Conclusion
