@@ -102,6 +102,31 @@ sudo make install
 |:--:| 
 | *Id vs Vds* |
 
+### Inverter Noise Margin
+
+<p>The noise margin of an inverter refers to the amount of noise (unwanted electrical signals) that the circuit can tolerate while still maintaining proper operation. It's a measure of the robustness of the circuit against interference and fluctuations in the input signal.</p>
+
+There are two types of noise margins:
+-High-level noise margin (NMH): This is the maximum amount of noise that can be added to the input signal of an inverter while still ensuring that the output remains at a logic high level (typically represented as '1' in digital systems).
+-Low-level noise margin (NML): This is the maximum amount of noise that can be added to the input signal of an inverter while still ensuring that the output remains at a logic low level (typically represented as '0' in digital systems).
+These margins are crucial for reliable operation of digital circuits, especially in environments where there may be electrical noise or interference. A larger noise margin implies greater resilience to noise, which is desirable for robust circuit design.
+
+| VOH     | VIH   | VIL   | V0L   | NMH   | NML   |
+| :---:   | :---: | :---: | :---: | :---: | :---: |
+|0.7	|0.428211	|0.245706	|0	|0.271789	|0.245706|
+| :---:   | :---: | :---: | :---: | :---: | :---: |
+|0.6	|0.358896	|0.245918	|0	|0.241104	|0.245918|
+| :---:   | :---: | :---: | :---: | :---: | :---: |
+|0.5	|0.358896	|0.213115	|0	|0.141104	|0.213115|
+| :---:   | :---: | :---: | :---: | :---: | :---: |
+|0.3	|0.174262	|0.114592	|0	|0.125738	|0.114592|
+| :---:   | :---: | :---: | :---: | :---: | :---: |
+|0.1	|0.054017	|0.269231	|0	|0.045983	|0.269231|
+
+![image](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/b42c10ea-8ff8-4399-8b02-a05bbbc8d511)
+
+
+
 | ![Screenshot from 2024-06-04 11-39-35](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/ede652d7-5fa4-4ae2-b077-1076b12cd987) | 
 |:--:| 
 | ![Screenshot from 2024-06-04 11-38-58](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/89f7031f-c961-42c4-8b18-2975c5885f29) | 
