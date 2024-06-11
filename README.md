@@ -110,18 +110,19 @@ There are two types of noise margins:
 -High-level noise margin (NMH): This is the maximum amount of noise that can be added to the input signal of an inverter while still ensuring that the output remains at a logic high level (typically represented as '1' in digital systems).
 -Low-level noise margin (NML): This is the maximum amount of noise that can be added to the input signal of an inverter while still ensuring that the output remains at a logic low level (typically represented as '0' in digital systems).
 These margins are crucial for reliable operation of digital circuits, especially in environments where there may be electrical noise or interference. A larger noise margin implies greater resilience to noise, which is desirable for robust circuit design.
+<p align = "centre">
+  
+| VOH     | VIH   | VIL   | V0L   | NMH   | NML   |  Inverter Threshold Vm  |
+| :---:   | :---: | :---: | :---: | :---: | :---: |  :---: |
+|0.7	|0.428211	|0.245706	|0	|0.271789	|0.245706|  0.3447862   |
+|0.6	|0.358896	|0.245918	|0	|0.241104	|0.245918|  0.2929297   |
+|0.5	|0.358896	|0.213115	|0	|0.141104	|0.213115|  0.2424476   |
+|0.3	|0.174262	|0.114592	|0	|0.125738	|0.114592|   0.1449210  | 
+|0.1	|0.054017	|0.269231	|0	|0.045983	|0.269231|   0.04446130 |
 
-| VOH     | VIH   | VIL   | V0L   | NMH   | NML   |
-| :---:   | :---: | :---: | :---: | :---: | :---: |
-|0.7	|0.428211	|0.245706	|0	|0.271789	|0.245706|
-|0.6	|0.358896	|0.245918	|0	|0.241104	|0.245918|
-|0.5	|0.358896	|0.213115	|0	|0.141104	|0.213115|
-|0.3	|0.174262	|0.114592	|0	|0.125738	|0.114592|
-|0.1	|0.054017	|0.269231	|0	|0.045983	|0.269231|
+The Above values are the noise margin when VOH is varied.
 
-![image](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/b42c10ea-8ff8-4399-8b02-a05bbbc8d511)
-
-
+</p>
 
 | ![Screenshot from 2024-06-04 11-39-35](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/ede652d7-5fa4-4ae2-b077-1076b12cd987) | 
 |:--:| 
@@ -131,6 +132,41 @@ These margins are crucial for reliable operation of digital circuits, especially
 | ![Screenshot from 2024-06-04 11-40-36](https://github.com/AsahiroKenpachi/finfet_characterestics/assets/137492506/0bdb2433-f37c-46b6-8ee3-2af088a861ef) | 
 |:--:| 
 | *Inverter Characterestics - with Multiple voltage for various VTC curves* |
+
+<p> Another interesting aspect for FinFET technologies is that
+the pull up network (PUN) and the pull down network
+(PDN) can become very symmetric. PMOS and NMOS
+devices with the same number of fins have very com-
+parable driving strength, and the conventional 2:1 or 3:1
+sizing strategy is not be applicable (or necessary) in the
+FinFET case. This can be seen from the In /Ip ratio in
+Table I, which is very close to 1 for the FinFET nodes.
+Figure 5 further demonstrates this. It plots the voltage
+transfer curve (VTC) under different supply voltages for a
+FinFET inverter with Wp /Wn = 1. It shows that the small-
+signal gain (which is the slope of the transfer curve when
+the input is equal to the mid-point voltage) is close to ideal
+(very high gain), and the curves are very balanced in all
+cases which further demonstrates that the ratio of 1:1 is
+optimal for FinFET logic.</p>
+<p>The reason behind this fact is due to the unique fab-
+rication process for FinFET. As opposed to planar struc-
+tures which can only be fabricated in a single plane due
+to process variation and interfaces traps, FinFETs can be
+fabricated with their channel along different directions
+in a single die. This results in enhanced hole mobility.
+The N type FinFETs implemented along plane <100> and
+the P type FinFETs fabricated along plane <110> lead to
+faster logic gates since it combats the inherent mobility
+difference between electrons and holes. Moreover,
+since the gate has very good control over the channel,
+doping concentrations can be much lower than in pla-
+nar devices, thus allowing to reduce the random dopant fluctuations (RDF), mitigating the impact of mobility on
+current.</p>
+<p>The symmetric PUN and PDN introduce ease in terms
+of physical design and sizing but it also brings slight
+changes in design decisions and standard cell design.</p>
+
 ### Conclusion
 
 The shift from CMOS To Finfet is very pivotal to Semiconductor Industry . But Tuning the properties become difficult because of second order effects. This can be seen via sub threshold currents in the simulation. These deviations will affects circuits constructed using them . One such evidence is the Noise Margin of the Finfet based Inverter which is not sharp.
